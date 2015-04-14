@@ -1,0 +1,41 @@
+===========================================================
+
+                                       _ _
+     _ __ ___   __ _  __ _ _ __   ___ | (_) __ _  (R)
+    | '_ ` _ \ / _` |/ _` | '_ \ / _ \| | |/ _` |
+    | | | | | | (_| | (_| | | | | (_) | | | (_| |
+    |_| |_| |_|\__,_|\__, |_| |_|\___/|_|_|\__,_|
+                     |___/
+
+===========================================================
+
+The easiest way to start with Magnolia CMS is to use the quickstart project located under /magnolia/projects/quickstart-project.
+
+If you want to create a new project, please use our maven archetype executing this command from the directory /magnolia/projects:
+
+$ mvn archetype:generate -DarchetypeCatalog=https://nexus.magnolia-cms.com/content/groups/public/
+
+The wizard will ask you some questions to automatically configure your project.
+
+See the official documentation for more details: https://documentation.magnolia-cms.com/display/DOCS/Creating+a+custom+bundle
+
+Now that you have a Magnolia CMS project, you can use the following commands from the project directory:
+ -  to build the project: mvn clean install
+ -  to start Magnolia CMS: docker-compose up <instance_name>
+ -  to stop Magnolia CMS: docker-compose stop
+ 
+The project can be opened from any IDE:
+
+- From the virtual machine:
+     1. Through the remote desktop, launch one of the installed IDE (Eclipse or IntelliJ)
+     2. Open your project as a Maven project
+     3. Build and start the container from the VM
+     4. Debug the instance from the IDE using remote debug (hotswap available)
+
+ - From your own laptop using Vagrant: 
+     1. Checkout and modify the code locally
+     2. Use vagrant rsync or rsync-auto to syncrhonise your laptop and VM. 
+     3. Build and start the container from the VM
+     3. Debug the instance from your IDE using remote debug (hotswap available)
+
+ 
