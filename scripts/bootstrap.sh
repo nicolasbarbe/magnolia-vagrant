@@ -8,7 +8,7 @@ apt-get update > /dev/null
 printf "Installing development tools ..."
 
 # Install development tools
-apt-get install -y default-jre default-jdk maven tomcat7 git-core bash-completion subversion wget curl > /dev/null 
+apt-get install -y default-jre default-jdk maven git-core bash-completion subversion wget curl > /dev/null 
 
 printf "Installing Docker ..."
 

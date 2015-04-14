@@ -38,4 +38,3 @@ The project can be opened from any IDE:
      3. Build and start the container from the VM
      3. Debug the instance from your IDE using remote debug (hotswap available)
 
- 
