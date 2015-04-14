@@ -10,7 +10,7 @@ This Vagrant Box contains a ready to use developer environment for Magnolia CMS
 ## Installation
 
 ### Locally
-1. Install Vagrant (http://www.vagrantup.com/downloads)
+1. Install Vagrant: http://www.vagrantup.com/downloads
 2. Check out this projet:
    
    ```
@@ -28,7 +28,7 @@ You can create a shortcut on your destkop or use an alias as your convenience.
 
 The following procedure is only valid for Linux or MacOSX
 
-1. Install Vagrant (http://www.vagrantup.com/downloads)
+1. Install Vagrant: http://www.vagrantup.com/downloads
 2. Check out this projet:
 
    ```
