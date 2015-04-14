@@ -1,0 +1,13 @@
+target
+overlays
+*.iml
+*.ipr
+*.iws
+*.log
+.idea
+.project
+.classpath
+.settings
+.checkstyle
+.vagrant
+quickstart-project
