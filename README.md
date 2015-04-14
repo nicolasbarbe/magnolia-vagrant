@@ -6,7 +6,6 @@ This Vagrant Box contains a ready to use developer environment for Magnolia CMS
 - Run the box on your computer or on Amazon AWS.
 - Debug magnolia with instant reload of resources, code and templates.
 - Contains a sample Magnolia project to quickstart your own project.
-- Optional remote desktop connection with a pre-configured IDE.
 
 ## Installation
 
@@ -31,7 +30,6 @@ The following procedure is only valid for Linux or MacOSX
     - 1043 (jpda), 
     - 1099 (jmx),
     - 8080 (http), 
-    - 5900-5950 (vnc remote destkop) 
 4. If you don't have any key-pairs available, create a new one and save it on your computer. For instance `ssh/magnolia_dev_env.pem`
 5. Set the following environment variables at the end of your profile `vi ~/.profile`:
    ```
