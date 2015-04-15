@@ -29,7 +29,7 @@ By default, your projects must be located under the directory `./magnolia-vagran
 You can override the host directory setting the environment variable `PROJECTS_ROOT` or starting the box with this command:
 
    ```
-   PROJECTS_ROOT='~/myprojects' vagrant
+   PROJECTS_ROOT='~/myprojects' vagrant up
    ```
 
 ## Configuration
