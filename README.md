@@ -8,7 +8,7 @@ This Vagrant Box contains a ready to use developer environment for Magnolia CMS
 
 ## Installation
 
-1. Install Vagrant (http://www.vagrantup.com/downloads)
+1. Install Vagrant: http://www.vagrantup.com/downloads
 
 2. Check out this projet:
    
