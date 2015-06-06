@@ -3,17 +3,19 @@ projectsRoot = ENV['PROJECTS_ROOT'] || './projects'
 Vagrant.configure(2) do |config|
   
   # network
-  config.vm.network "private_network", type: "dhcp"
+  config.vm.network "private_network", ip: "10.1.2.3"
   config.vm.hostname = "magnolia-dev-env"
 
   # provisioning
-  config.vm.provision :shell, path: "./scripts/bootstrap.sh"
-  config.vm.provision :shell, path: "./scripts/user-config.sh", privileged: false
+ config.vm.provision :shell, path: "./scripts/bootstrap.sh"
+ config.vm.provision :shell, path: "./scripts/user-config.sh", privileged: false
   
-  # share an additional folder to the guest VM. 
-  config.vm.synced_folder ".", "/magnolia", type: "rsync", rsync__exclude: [".git/", "target/", ".idea", ".DS_Store", "projects"] 
-  config.vm.synced_folder ".", "/vagrant", disabled: true
-  config.vm.synced_folder projectsRoot, "/magnolia/projects", type: "nfs"
+  # folder sync
+ config.vm.synced_folder ".", "/vagrant", disabled: true
+ config.vm.synced_folder ".", "/magnolia", type: "rsync", rsync__exclude: ["projects/", ".DS_Store"] 
+ config.vm.synced_folder projectsRoot, "/magnolia/projects", type: "rsync", rsync__exclude: ["target/", ".idea", ".DS_Store"] 
+ # config.vm.synced_folder projectsRoot, "/magnolia/projects", type: "nfs"
+ 
 
   # configure provider
   config.vm.provider "virtualbox" do |virtualbox, override|

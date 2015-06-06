@@ -8,7 +8,15 @@ apt-get update > /dev/null
 printf "Installing development tools ..."
 
 # Install development tools
-apt-get install -y default-jre default-jdk maven git-core bash-completion subversion wget curl > /dev/null 
+apt-get install -y default-jre default-jdk maven git-core bash-completion subversion wget curl  > /dev/null 
+
+printf "Installing nodejs ..."
+apt-get install -y libssl-dev build-essential > /dev/null 
+curl https://raw.githubusercontent.com/creationix/nvm/v0.25.0/install.sh | bash
+source ~/.profile
+nvm install 0.10
+nvm install 0.12
+nvm use 0.12
 
 printf "Installing Docker ..."
 
@@ -22,7 +30,7 @@ curl -s -L https://raw.githubusercontent.com/docker/compose/1.1.0/contrib/comple
 
 printf "Configuring the development environment ..."
 
-# Set the locale
+#Set the locale
 locale-gen UTF-8
 
 # Modify motd
@@ -34,7 +42,6 @@ chmod +x /etc/update-motd.d/00-magnolia
 printf "Update some global environment variables"
 echo 'JAVA_HOME="/usr/lib/jvm/java-7-openjdk-amd64/"' | sudo tee -a /etc/environment
 echo 'LC_ALL="en_US.UTF-8"' | sudo tee -a /etc/environment
-echo 'ClientAliveInterval 60' | sudo tee -a /etc/ssh/sshd_config
 
 printf "Cleaning ..."
 apt-get autoclean > /dev/null 

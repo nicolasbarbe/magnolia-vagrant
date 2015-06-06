@@ -1,5 +1,6 @@
 #!/bin/sh
 printf "Welcome to %s (%s %s %s)\n" "Magnolia Developer Environment" "$(uname -o)" "$(uname -r)" "$(uname -m)\n"
 cat /magnolia/config/magnolia_intro
-printf "Magnolia Dev Box Ip: "
+printf "Your Magnolia box IP is: "
 echo `ifconfig eth1 2>/dev/null|awk '/inet addr:/ {print $2}'|sed 's/addr://'`
+printf "\n"
