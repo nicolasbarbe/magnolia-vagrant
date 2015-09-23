@@ -20,9 +20,9 @@ Vagrant.configure(2) do |config|
   # configure provider
   config.vm.provider "virtualbox" do |virtualbox, override|
 
-    override.vm.box = "ubuntu/utopic64"
-    override.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/utopic/current/utopic-server-cloudimg-amd64-vagrant-disk1.box"
-    override.vm.box_download_checksum = "f049128b25f47a9bd064d856ae636367"
+    override.vm.box = "ubuntu/vivid64"
+    override.vm.box_url = "https://cloud-images.ubuntu.com/vagrant/vivid/current/vivid-server-cloudimg-amd64-vagrant-disk1.box"
+    override.vm.box_download_checksum = "502923c3aeb0ce101fa783585c37e38d"
     override.vm.box_download_checksum_type = "md5"
 
     host = RbConfig::CONFIG['host_os']
